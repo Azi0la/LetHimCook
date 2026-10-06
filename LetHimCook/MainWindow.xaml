@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:LetHimCook"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="LetHimCook" Height="450" Width="800">
 
     <Grid>
         <Frame x:Name="MainFrame"/>
@@ -18,12 +18,35 @@
                 <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center">
                     <Button Style="{StaticResource IconButton}" Click="MainButt_Click" Tag="1" Margin="0,10,0,10">
                         <Image Source="/res/home.png"/>
+                        <Button.ToolTip>
+                            <ToolTip>
+                                Главная страница
+                            </ToolTip>
+                        </Button.ToolTip>
                     </Button>
                     <Button  Style="{StaticResource IconButton}" Click="MainButt_Click" Tag="2" Margin="0,10,0,10">
                         <Image Source="/res/edit.png"/>
+                        <Button.ToolTip>
+                            <ToolTip>
+                                Редактор постов
+                            </ToolTip>
+                        </Button.ToolTip>
                     </Button>
                     <Button Style="{StaticResource IconButton}" Click="MainButt_Click" Tag="3" Margin="0,10,0,10">
                         <Image Source="/res/account.png"/>
+                        <Button.ToolTip>
+                            <ToolTip>
+                                Аккаунт
+                            </ToolTip>
+                        </Button.ToolTip>
+                    </Button>
+                    <Button Style="{StaticResource IconButton}" Click="StyleButton_Click" Tag="4" Margin="0,10,0,10">
+                        <Image Source="/res/settings-sliders.png"/>
+                        <Button.ToolTip>
+                            <ToolTip>
+                                Изменить тему
+                            </ToolTip>
+                        </Button.ToolTip>
                     </Button>
                 </StackPanel>
             </Border>
