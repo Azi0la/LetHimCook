@@ -9,5 +9,52 @@
 
     <Grid>
         <Frame x:Name="MainFrame"/>
+
+        <Border Width="80" HorizontalAlignment="Left" Background="Transparent">
+            <Border x:Name="NavPanel" Background="Gray" CornerRadius="0,15,15,0" Width="60" HorizontalAlignment="Left">
+                <Border.RenderTransform>
+                    <TranslateTransform X="-50"/>
+                </Border.RenderTransform>
+                <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <Button Style="{StaticResource IconButton}" Click="MainButt_Click" Tag="1" Margin="0,10,0,10">
+                        <Image Source="/res/home.png"/>
+                    </Button>
+                    <Button  Style="{StaticResource IconButton}" Click="MainButt_Click" Tag="2" Margin="0,10,0,10">
+                        <Image Source="/res/edit.png"/>
+                    </Button>
+                    <Button Style="{StaticResource IconButton}" Click="MainButt_Click" Tag="3" Margin="0,10,0,10">
+                        <Image Source="/res/account.png"/>
+                    </Button>
+                </StackPanel>
+            </Border>
+            <Border.Triggers>
+                <EventTrigger RoutedEvent="Mouse.MouseEnter">
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <DoubleAnimation Storyboard.TargetName="NavPanel" Storyboard.TargetProperty="(UIElement.RenderTransform).(TranslateTransform.X)"
+                                             To="0" Duration="0:0:0.3">
+                                <DoubleAnimation.EasingFunction>
+                                    <CubicEase EasingMode="EaseOut"/>
+                                </DoubleAnimation.EasingFunction>
+                            </DoubleAnimation>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+
+                <EventTrigger RoutedEvent="Mouse.MouseLeave">
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <DoubleAnimation Storyboard.TargetName="NavPanel" Storyboard.TargetProperty="(UIElement.RenderTransform).(TranslateTransform.X)"
+                             To="-50" Duration="0:0:0.3">
+                                <DoubleAnimation.EasingFunction>
+                                    <CubicEase EasingMode="EaseOut"/>
+                                </DoubleAnimation.EasingFunction>
+                            </DoubleAnimation>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+            </Border.Triggers>
+            
+        </Border>
     </Grid>
 </Window>

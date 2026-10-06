@@ -26,5 +26,33 @@ namespace LetHimCook
             MainFrame.NavigationUIVisibility = NavigationUIVisibility.Hidden;
             MainFrame.NavigationService.Navigate(new Pages.MainPage());
         }
+
+        private void MainButt_Click(object sender, RoutedEventArgs e)
+        {
+            if(sender is Button button)
+            {
+                if (button.Tag != null)
+                {
+
+                    if (button.Tag != null)
+                    {
+                        switch (button.Tag)
+                        {
+                            case "1":
+                                MainFrame.Navigate(new Pages.MainPage());
+                                break;
+                            case "2":
+                                MainFrame.Navigate(new Pages.CreatePage());
+                                break;
+                            case "3":
+                                MainFrame.Navigate(new Pages.UserPage());
+                                break;
+                        }
+
+                    }
+                }
+
+            }
+        }
     }
 }
