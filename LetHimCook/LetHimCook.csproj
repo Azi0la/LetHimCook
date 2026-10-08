@@ -98,6 +98,9 @@
     <Compile Include="Likes.cs">
       <DependentUpon>LHCdb.tt</DependentUpon>
     </Compile>
+    <Compile Include="Pages\RegPage.xaml.cs">
+      <DependentUpon>RegPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Recipes.cs">
       <DependentUpon>LHCdb.tt</DependentUpon>
     </Compile>
@@ -125,6 +128,10 @@
     <Compile Include="Users.cs">
       <DependentUpon>LHCdb.tt</DependentUpon>
     </Compile>
+    <Page Include="Pages\RegPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Styles\Dark.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

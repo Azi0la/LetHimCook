@@ -16,21 +16,21 @@ using System.Windows.Shapes;
 namespace LetHimCook.Pages
 {
     /// <summary>
-    /// Логика взаимодействия для AuthPage.xaml
+    /// Логика взаимодействия для RegPage.xaml
     /// </summary>
-    public partial class AuthPage : Page
+    public partial class RegPage : Page
     {
-        public AuthPage()
+        public RegPage()
         {
             InitializeComponent();
         }
 
-        private void ForgotButt_Click(object sender, RoutedEventArgs e)
+        private void RememberButt_Click(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new RegPage());
+
         }
 
-        private void AuthButt_Click(object sender, RoutedEventArgs e)
+        private void RegButt_Click(object sender, RoutedEventArgs e)
         {
 
         }
