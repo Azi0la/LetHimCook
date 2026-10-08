@@ -21,6 +21,18 @@
             <StackPanel>
                 <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center"
                            Text="Let Him Cook" FontSize="30"/>
+                <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center"
+                    Text="Авторизация" FontSize="24" Margin="0,0,0,15"/>
+                <WrapPanel HorizontalAlignment="Center">
+                    <TextBlock Text="Логин:" FontSize="18"/>
+                    <TextBox x:Name="LoginTB" Width="225" Height="30"/>
+                </WrapPanel>
+                <WrapPanel HorizontalAlignment="Center">
+                    <TextBlock Text="Пароль:" FontSize="18"/>
+                    <PasswordBox x:Name="PassTB" Width="225" Height="30"/>
+                </WrapPanel>
+                <Button x:Name="AuthButt" Width="100" Height="40" Content="Войти" Margin="10"/>
+                <Button x:Name="ForgotButt" Width="115" Content="Нет аккаунта?" Background="Transparent"/>
             </StackPanel>
         </Border>
     </Grid>
