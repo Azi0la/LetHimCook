@@ -237,6 +237,10 @@
       <DependentUpon>LHCdb.edmx</DependentUpon>
       <LastGenOutput>LHCdb.cs</LastGenOutput>
     </Content>
+    <Resource Include="res\Dark-edit.png" />
+    <Resource Include="res\Dark-home.png" />
+    <Resource Include="res\Dark-user.png" />
+    <Resource Include="res\Dark-settings-sliders.png" />
     <Resource Include="res\settings-sliders.png" />
   </ItemGroup>
   <ItemGroup>

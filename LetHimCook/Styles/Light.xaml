@@ -7,6 +7,8 @@
     <SolidColorBrush x:Key="InputBorderBrush" Color="#CBD5E1"/>
     <SolidColorBrush x:Key="AccentBrush" Color="LightBlue"/>
     <SolidColorBrush x:Key="ButtonTextBrush" Color="#202938"/>
+    <SolidColorBrush x:Key="SidePanelBrush" Color="#FFFFFF"/>
+    <SolidColorBrush x:Key="IconHoverBrush" Color="#B0D4F1"/>
 
     <Style TargetType="Window">
         <Setter Property="Background" Value="{DynamicResource WindowBackgroundBrush}"/>
@@ -26,12 +28,14 @@
     <Style TargetType="Button" x:Key="IconButton">
         <Setter Property="Width" Value="40"/>
         <Setter Property="Height" Value="30"/>
-        <Setter Property="FontSize" Value="16"/>
+        <Setter Property="Margin" Value="0,6"/>
         <Setter Property="Background" Value="Transparent"/>
-        <Setter Property="Foreground" Value="Black"/>
+        <Setter Property="Cursor" Value="Hand"/>
+        <Setter Property="HorizontalContentAlignment" Value="Center"/>
+        <Setter Property="VerticalContentAlignment" Value="Center"/>
     </Style>
-    
-    
+
+
     <Style TargetType="Button">
         <Style.Resources>
             <Style TargetType="TextBlock">

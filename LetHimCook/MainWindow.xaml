@@ -11,37 +11,37 @@
         <Frame x:Name="MainFrame"/>
 
         <Border Width="80" HorizontalAlignment="Left" Background="Transparent">
-            <Border x:Name="NavPanel" Background="Gray" CornerRadius="0,15,15,0" Width="60" HorizontalAlignment="Left">
+            <Border x:Name="NavPanel" Background="{DynamicResource SidePanelBrush}" CornerRadius="0,15,15,0" Width="60" HorizontalAlignment="Left">
                 <Border.RenderTransform>
                     <TranslateTransform X="-50"/>
                 </Border.RenderTransform>
                 <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center">
-                    <Button Style="{StaticResource IconButton}" Click="MainButt_Click" Tag="1" Margin="0,10,0,10">
-                        <Image Source="/res/home.png"/>
+                    <Button x:Name="HomeButt" Style="{StaticResource IconButton}" Click="MainButt_Click" Tag="1" Margin="0,10,0,10">
+                        <Image x:Name="HomeImage" Source="/res/Dark-home.png"/>
                         <Button.ToolTip>
                             <ToolTip>
                                 Главная страница
                             </ToolTip>
                         </Button.ToolTip>
                     </Button>
-                    <Button  Style="{StaticResource IconButton}" Click="MainButt_Click" Tag="2" Margin="0,10,0,10">
-                        <Image Source="/res/edit.png"/>
+                    <Button x:Name="EditButt" Style="{StaticResource IconButton}" Click="MainButt_Click" Tag="2" Margin="0,10,0,10">
+                        <Image x:Name="EditImage" Source="/res/Dark-edit.png"/>
                         <Button.ToolTip>
                             <ToolTip>
                                 Редактор постов
                             </ToolTip>
                         </Button.ToolTip>
                     </Button>
-                    <Button Style="{StaticResource IconButton}" Click="MainButt_Click" Tag="3" Margin="0,10,0,10">
-                        <Image Source="/res/account.png"/>
+                    <Button x:Name="AccButt" Style="{StaticResource IconButton}" Click="MainButt_Click" Tag="3" Margin="0,10,0,10">
+                        <Image x:Name="AccImage" Source="/res/Dark-user.png"/>
                         <Button.ToolTip>
                             <ToolTip>
                                 Аккаунт
                             </ToolTip>
                         </Button.ToolTip>
                     </Button>
-                    <Button Style="{StaticResource IconButton}" Click="StyleButton_Click" Tag="4" Margin="0,10,0,10">
-                        <Image Source="/res/settings-sliders.png"/>
+                    <Button x:Name="ThemeButt" Style="{StaticResource IconButton}" Click="StyleButton_Click" Tag="4" Margin="0,10,0,10">
+                        <Image x:Name="ThemeImage" Source="/res/Dark-settings-sliders.png"/>
                         <Button.ToolTip>
                             <ToolTip>
                                 Изменить тему

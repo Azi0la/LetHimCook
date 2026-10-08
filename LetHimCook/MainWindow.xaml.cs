@@ -29,19 +29,36 @@ namespace LetHimCook
 
         private bool IsDarkTheme = false;
 
+
         private void StyleButton_Click(object sender, RoutedEventArgs e)
         {
             IsDarkTheme = !IsDarkTheme;
 
             string theme = "";
-            if (IsDarkTheme) theme = "Dark.xaml";
-            else theme = "Light.xaml";
+            if (IsDarkTheme)
+            {
+                theme = "Dark.xaml";
+                HomeImage.Source = new BitmapImage(new Uri("home.png", UriKind.Relative));
+                EditImage.Source = new BitmapImage(new Uri("edit.png", UriKind.Relative));
+                AccImage.Source = new BitmapImage(new Uri("account.png", UriKind.Relative));
+                ThemeImage.Source = new BitmapImage(new Uri("settings-slider.png", UriKind.Relative));
+            }
+            else { 
+                theme = "Light.xaml";
+                HomeImage.Source = new BitmapImage(new Uri("Dark-home.png", UriKind.Relative));
+                EditImage.Source = new BitmapImage(new Uri("Dark-edit.png", UriKind.Relative));
+                AccImage.Source = new BitmapImage(new Uri("Dark-user.png", UriKind.Relative));
+                ThemeImage.Source = new BitmapImage(new Uri("Dark-settings-slider.png", UriKind.Relative));
+            }
 
             var dictionary = new ResourceDictionary
             {
-                Source = new Uri($"Styles/{theme}", UriKind.Relative)
+                Source = new Uri($"/Styles/{theme}", UriKind.Relative)
             };
-            Application.Current.Resources[0] = dictionary;
+            Application.Current.Resources.MergedDictionaries.Clear();
+            Application.Current.Resources.MergedDictionaries.Add(dictionary);
+
+
         }
 
         private void MainButt_Click(object sender, RoutedEventArgs e)
