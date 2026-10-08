@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Path = System.IO.Path;
 
 namespace LetHimCook
 {
@@ -20,6 +21,7 @@ namespace LetHimCook
     /// </summary>
     public partial class MainWindow : Window
     {
+        Users user;
         public MainWindow()
         {
             InitializeComponent();
@@ -38,17 +40,17 @@ namespace LetHimCook
             if (IsDarkTheme)
             {
                 theme = "Dark.xaml";
-                HomeImage.Source = new BitmapImage(new Uri("home.png", UriKind.Relative));
-                EditImage.Source = new BitmapImage(new Uri("edit.png", UriKind.Relative));
-                AccImage.Source = new BitmapImage(new Uri("account.png", UriKind.Relative));
-                ThemeImage.Source = new BitmapImage(new Uri("settings-slider.png", UriKind.Relative));
+                SetImage(HomeImage, "home.png");
+                SetImage(EditImage, "edit.png");
+                SetImage(AccImage, "account.png");
+                SetImage(ThemeImage, "settings-sliders.png");
             }
             else { 
                 theme = "Light.xaml";
-                HomeImage.Source = new BitmapImage(new Uri("Dark-home.png", UriKind.Relative));
-                EditImage.Source = new BitmapImage(new Uri("Dark-edit.png", UriKind.Relative));
-                AccImage.Source = new BitmapImage(new Uri("Dark-user.png", UriKind.Relative));
-                ThemeImage.Source = new BitmapImage(new Uri("Dark-settings-slider.png", UriKind.Relative));
+                SetImage(HomeImage, "Dark-home.png");
+                SetImage(EditImage, "Dark-edit.png");
+                SetImage(AccImage, "Dark-user.png");
+                SetImage(ThemeImage, "Dark-settings-sliders.png");  // именно sliders (с s)
             }
 
             var dictionary = new ResourceDictionary
@@ -59,6 +61,12 @@ namespace LetHimCook
             Application.Current.Resources.MergedDictionaries.Add(dictionary);
 
 
+        }
+
+        private void SetImage(Image image, string fileName)
+        {
+            image.Source = new BitmapImage(
+                new Uri($"pack://application:,,,/res/{fileName}", UriKind.Absolute));
         }
 
         private void MainButt_Click(object sender, RoutedEventArgs e)
@@ -79,7 +87,8 @@ namespace LetHimCook
                                 MainFrame.Navigate(new Pages.CreatePage());
                                 break;
                             case "3":
-                                MainFrame.Navigate(new Pages.UserPage());
+                                if(user == null) MainFrame.Navigate(new Pages.AuthPage());
+                                else MainFrame.Navigate(new Pages.UserPage());
                                 break;
                         }
 

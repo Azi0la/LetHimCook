@@ -222,9 +222,15 @@
     <Folder Include="RecipesMD\" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="res\account.png" />
-    <Resource Include="res\edit.png" />
-    <Resource Include="res\home.png" />
+    <Resource Include="res\account.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="res\edit.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="res\home.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
   <ItemGroup>
     <Content Include="LHCdb.Context.tt">
@@ -237,11 +243,27 @@
       <DependentUpon>LHCdb.edmx</DependentUpon>
       <LastGenOutput>LHCdb.cs</LastGenOutput>
     </Content>
-    <Resource Include="res\Dark-edit.png" />
-    <Resource Include="res\Dark-home.png" />
-    <Resource Include="res\Dark-user.png" />
-    <Resource Include="res\Dark-settings-sliders.png" />
-    <Resource Include="res\settings-sliders.png" />
+    <Resource Include="res\notcatt.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="res\catt.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="res\Dark-edit.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="res\Dark-home.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="res\Dark-user.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="res\Dark-settings-sliders.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="res\settings-sliders.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />

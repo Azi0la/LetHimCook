@@ -9,6 +9,14 @@
       Title="AuthPage">
 
     <Grid>
-        
+        <Border
+            BorderBrush="LightBlue"
+            BorderThickness="2"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
+            Width="100"
+            Height="100">
+            
+        </Border>
     </Grid>
 </Page>
