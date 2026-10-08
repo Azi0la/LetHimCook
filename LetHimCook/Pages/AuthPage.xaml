@@ -6,17 +6,22 @@
       xmlns:local="clr-namespace:LetHimCook.Pages"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="AuthPage">
+      Title="AuthPage"
+      Background="{DynamicResource WindowBackgroundBrush}">
 
     <Grid>
         <Border
-            BorderBrush="LightBlue"
-            BorderThickness="2"
+            Style="{StaticResource Border1}"
             HorizontalAlignment="Center"
             VerticalAlignment="Center"
-            Width="100"
-            Height="100">
-            
+            Width="275"
+            Height="325"
+            CornerRadius="15">
+
+            <StackPanel>
+                <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center"
+                           Text="Let Him Cook" FontSize="30"/>
+            </StackPanel>
         </Border>
     </Grid>
 </Page>
